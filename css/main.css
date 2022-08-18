@@ -2,6 +2,15 @@ body{
     font-family: 'Rubik', sans-serif !important;
 }
 
+footer {
+    margin-top: 100px;
+    position: relative;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    background-color:  	#fecd45 !important;
+}
+
 h1{
     color: #2568fb;
     margin-bottom: 50px;
@@ -33,4 +42,8 @@ h3{
 
 .navbar{
     background-color:  	#fecd45 !important;
+}
+
+.p-footer{
+    position: relative;
 }
