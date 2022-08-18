@@ -1,0 +1,34 @@
+body{
+    font-family: 'Rubik', sans-serif !important;
+}
+
+h3{
+    margin-top: 100px;
+}
+
+.favorite-color{
+    color:  #FADADD;
+}
+
+.about-me{
+    margin-top: 80px;
+}
+.navbar-nav > li{
+    margin-left:40px;
+}
+
+.navbar-brand{
+    color: #622FF5;
+}
+
+.nav-link{
+    color: #622FF5;
+}
+
+.logo{
+    width: 50px;
+}
+
+.navbar{
+    background-color: #FADADD !important;
+}
