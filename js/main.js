@@ -1,29 +1,24 @@
 $(document).ready(function() {
-    let posts = [
-        {
-        title: 'Tamo junto viado',
-        content: 'Tamo viado viado viado viado viado viado viado viado'
-        },
-        {
-            title: 'Tamo junto viado',
-            content: 'Tamo viado viado viado viado viado viado viado viado'
-            },
-            {
-                title: 'Tamo junto viado',
-                content: 'Tamo viado viado viado viado viado viado viado viado'
-                },
+
+    $.getJSON('http://localhost:3000/projects', function (data) {
+    var posts = []
+        data.forEach(function(project){
+            posts.push(
                 {
-                    title: 'Tamo junto viado',
-                    content: 'Tamo viado viado viado viado viado viado viado viado'
-                    },
-    ]
+                    title: project.title,
+                    content: project.content
+                }
+            )
+        })
 
-    createPosts(posts)
-
+        console.log(posts.size);
+        createPosts(posts)
+    })
 });
 
 function createPosts(posts){
     posts.forEach(function(post){ 
+        console.log(post.title)
         buildPostCard(post.title, post.content)
     }
     ); 
@@ -39,7 +34,9 @@ function buildPostCard(title, content){
     my3.append('<div class="card-thumbnail"></div>')
     let thumbnail =$('.card-thumbnail').last();
 
-    thumbnail.append('<img src="https://www.markuptag.com/images/image-two.jpg" class="img-fluid" alt="thumbnail">')
+    //https://miro.medium.com/max/1400/1*9hd_8qR0CMZ8L0pVbFLjDw.png"
+    //https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg
+    thumbnail.append('<img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" class="img-fluid" alt="thumbnail">')
 
     my3.append('<div class="card-body"></div>')
     let cardBody = $('.card-body').last();
