@@ -39,6 +39,10 @@ form{
     background-color:  	#fecd45 !important;
 }
 
+.pagination{
+    margin-top: 50px;
+}
+
 a{
     text-decoration: none;
 }

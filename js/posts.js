@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $.getJSON('http://localhost:3000/posts', function (data) {
+    $.getJSON(url(), function (data) {
     var posts = []
         data.forEach(function(project){
             posts.push(
@@ -22,6 +22,17 @@ function createPosts(posts){
         buildPostCard(post.title, post.content)
     }
     ); 
+}
+
+function url(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const pageParams = urlParams.get('page');
+
+    if(pageParams != undefined && pageParams != null){
+        return `http://localhost:3000/posts/?page=${pageParams}`
+    }else{
+        return 'http://localhost:3000/posts'
+    }
 }
 
 function buildPostCard(title, content){
