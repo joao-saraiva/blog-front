@@ -12,6 +12,8 @@ function login(){
 $('form').submit(function(event) {
     var content = $('#content').val();
     var title = $('#title').val();
+    var url = $('#url').val();
+
     console.log(content);
     console.log(title);
     $.ajax({
@@ -19,7 +21,8 @@ $('form').submit(function(event) {
         data: {
             project:{
                 title: title,
-                content: content
+                content: content,
+                url: url
             }
         },
         type: 'POST',
